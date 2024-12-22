@@ -42,3 +42,5 @@ group :development, :test do
   gem 'rubocop-fjord', require: false
   gem 'rubocop-rails', require: false
 end
+
+gem 'rack-cors' # cors設定を管理する
