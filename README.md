@@ -1,0 +1,1 @@
+rails apiでomniauth-githubを使ってみる
