@@ -38,9 +38,14 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
 
-  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  gem 'dotenv-rails'
   gem 'rubocop-fjord', require: false
   gem 'rubocop-rails', require: false
 end
+
+gem 'devise'
+# gem 'omniauth' omniauth-githubを入れると自動で入る
+gem 'devise_token_auth'
+gem 'omniauth-github'
 
 gem 'rack-cors' # cors設定を管理する
