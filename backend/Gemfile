@@ -43,9 +43,9 @@ group :development, :test do
   gem 'rubocop-rails', require: false
 end
 
+gem 'active_model_serializers' # レスポンスJSONを成形する
 gem 'devise'
 # gem 'omniauth' omniauth-githubを入れると自動で入る
 gem 'devise_token_auth'
 gem 'omniauth-github'
-
 gem 'rack-cors' # cors設定を管理する
