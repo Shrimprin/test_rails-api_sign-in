@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useSnackbarState } from "@/hooks/useGlobalState";
+import { useUserState, useSnackbarState } from "@/hooks/useGlobalState";
 
 type SignUpFormData = {
   email: string;
@@ -15,6 +15,7 @@ type SignUpFormData = {
 
 const SignUp: NextPage = () => {
   const router = useRouter();
+  const [user, setUser] = useUserState();
   const [, setSnackbar] = useSnackbarState();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -62,6 +63,10 @@ const SignUp: NextPage = () => {
           );
           localStorage.setItem("client", res.headers["client"] || "");
           localStorage.setItem("uid", res.headers["uid"] || "");
+          setUser({
+            ...user,
+            isFetched: false,
+          });
           setSnackbar({
             message: "登録しました。",
             severity: "success",
