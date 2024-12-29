@@ -1,3 +1,5 @@
+"use client";
+
 import useSWR from "swr";
 
 export const useUserState = () => {
@@ -17,7 +19,7 @@ export const useUserState = () => {
     isFetched: false,
   };
 
-  const { data: state, mutate: setState } = useSWR("user", null, {
+  const { data: state, mutate: setState } = useSWR("user", {
     fallbackData: fallbackData,
   });
   return [state, setState] as [userStateType, (value: userStateType) => void];
@@ -40,6 +42,6 @@ export const useSnackbarState = () => {
   });
   return [state, setState] as [
     snackbarStateType,
-    (value: snackbarStateType) => void,
+    (value: snackbarStateType) => void
   ];
 };
