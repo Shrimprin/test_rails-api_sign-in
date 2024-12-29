@@ -10,6 +10,7 @@ const Header = () => {
     <header className="bg-white text-black py-3 shadow-none">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
+          <p>Test App</p>
           {user.isFetched && (
             <>
               {!user.isSignedIn && (
