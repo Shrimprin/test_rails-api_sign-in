@@ -48,4 +48,5 @@ gem 'devise'
 # gem 'omniauth' omniauth-githubを入れると自動で入る
 gem 'devise_token_auth'
 gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
 gem 'rack-cors' # cors設定を管理する
