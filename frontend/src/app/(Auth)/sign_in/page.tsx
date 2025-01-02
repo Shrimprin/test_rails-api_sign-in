@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { useUserState, useSnackbarState } from "@/hooks/useGlobalState";
+import SignInButton from "@/components/SignInButton";
 
 type SignInFormData = {
   email: string;
@@ -70,6 +71,7 @@ const SignIn: NextPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full space-y-8">
+        <SignInButton></SignInButton>
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Sign in
